@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="initial-scale=1, width=device-wdth">
+        <meta property="og:description" content="fun app that keeps track of your daily health goals">
+        <meta property="og:title" content="Daily Positive Actions">
+        <title>DPA</title>
+        <script src="{{ url_for('static', filename='js/one-decision.js') }}"></script>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style/one-decision.css') }}">
+    </head>
+    <body id="{{ page_id }}">
+        {% block body %}
+        {% endblock %}
+    </body>
+</html>

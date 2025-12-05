@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*, html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", "Poppins", sans-serif;
+}
+#landing {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
+}
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+header div:nth-child(1) {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+header div:nth-child(1) h4 {
+    width: 80px;
+}
+header div:nth-child(1) img {
+    width: 45px;
+    height: 45px;
+    background-color: green;
+    padding: 3px;
+    border-radius: 10px;
+}
+.horiLine {
+    height: 0.5px;
+    width: 100vw;
+    background-color: lightgray;
+    /* margin-bottom: -30px; */
+}
+main .heroH {
+    font-size: xx-large;
+    width: fit-content;
+    padding-left: 8.5rem;
+    padding-right: 8.5rem;
+    margin: auto;
+    /* margin-top: 1rem; */
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: bolder;
+    line-height: 1.4;
+}
+main .heroH span {
+    background: linear-gradient(45deg, lightgreen, green);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+main .heroT {
+    margin: auto;
+    text-align: center;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    line-height: 1.5;
+    color: gray;
+}
+main button {
+    padding: 20px;
+    padding-left: 80px;
+    padding-right: 80px;
+    border-radius: 50px;
+    color: white;
+    background-color: lightseagreen;
+    border: none;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 2rem;
+    cursor: pointer;
+}
+main button:hover {
+    background-color: rgb(27, 145, 139);
+    box-shadow: 0 0 10px 5px rgb(141, 244, 239);
+}
+.fCont {
+    display: grid;
+    background-color: rgb(246, 246, 246);
+    border-radius: 20px;
+    width: 23rem;
+    margin: auto;
+    margin-top: 2rem;
+    gap: 15px;
+    padding: 15px;
+}
+.cont {
+    outline: 0.2px solid lightgray;
+    background-color: white;
+    width: 20rem;
+    margin: auto;
+    padding: 20px;
+    border-radius: 15px;
+}
+.cont img {
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    margin-bottom: 8px;
+    background-color: lightblue;
+    border-radius: 10px;
+}
+.cont div {
+    color: gray;
+    font-size: small;
+    line-height: 1.4;
+    margin-top: 7px;
+}
+.cont .img2 {
+    background-color: lightpink;
+}
+footer {
+    text-align: center;
+    font-size: smaller;
+    line-height: 1.7;
+    margin-top: 1rem;
+}
+footer div:nth-child(3) {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+} 
+footer img {
+    width: 40px;
+    height: 40px;
+    transition: 0.2s;
+}
+footer .lmt {
+    background-color: black;
+    border-radius: 10px;
+}
+footer .x:hover {
+    background-color: lightgreen;
+    border-radius: 10px;
+}
+
+/* styling for index page */
+#idex header {
+    justify-content: center;
+}
+#index main {
+    text-align: center;
+    margin-top: 10px;
+}
