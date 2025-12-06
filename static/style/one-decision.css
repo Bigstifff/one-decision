@@ -141,10 +141,117 @@ footer .x:hover {
 }
 
 /* styling for index page */
-#idex header {
+#index main {
+    position: relative;
+}
+#index header {
     justify-content: center;
+    background-color: lightblue;
+    margin-bottom: 2rem;
+    width: 100vw;
+}
+#index header div {
+    display: block;
+    text-align: center;
+}
+#index header div h4 {
+    width: fit-content;
 }
 #index main {
     text-align: center;
     margin-top: 10px;
+}
+#index .indexH {
+    text-align: center;
+    margin-bottom: 0.8rem;
+}
+#index main form {
+    /* outline: 1px solid red; */
+    margin: auto;
+    width: fit-content;
+    padding: 5px;
+    display: grid;
+    gap: 15px;
+    overflow-y: auto;
+    height: 30rem;
+}
+#index main form .choices_1 {
+    display: grid;
+    gap: 15px;
+}
+#index main form .choices_2 {
+    display: grid;
+    gap: 15px;
+}
+#index main form .choice {
+    position: relative;
+    width: 25rem;
+}
+#index main form .choice .check {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10%;
+    z-index: 5;
+}
+#index main form .choice label {
+    display: block;
+    background-color: lightblue;
+    padding: 15px;
+    padding-left: 20px;
+    border-radius: 15px;
+    text-align: left;
+    box-shadow: 0 7px 0 0 rgb(25, 144, 255);
+    cursor: pointer;
+    transition: 0.2s;
+}
+#index main form .choice label:hover {
+    background-color: rgb(104, 198, 230);
+}
+#index main form .choice .check:checked + label {
+    box-shadow: none;
+    transform: translateY(8px);
+    background-color: rgb(104, 198, 230);
+}
+#index main form .choice .check:checked {
+    transform: translateY(3px);
+}
+#index main form .setCont {
+    position: fixed;
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#index main form .setCont .count {
+    font-size: small;
+    font-weight: bold;
+    background-color: lightblue;
+    padding: 4px;
+    padding-left: 80px;
+    padding-right: 80px;
+    border-radius: 20px;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 5px;
+}
+#index main form .setBtn {
+    background-color: limegreen;
+    color: white;
+    font-weight: bolder;
+    font-size: large;
+    padding: 10px;
+    padding-left: 80px;
+    padding-right: 80px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+#index main form .setBtn:hover {
+    background-color: rgb(46, 179, 46);
+}
+@media(min-width: 850px) {
+    #index main form {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }

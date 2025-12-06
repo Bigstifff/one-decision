@@ -16,6 +16,10 @@
             <div>Pick 5 habits in the morning. Check them off at night.</div>
             <div>No clutter. No ads. Just progress.</div>
         </div>
+        <form action="/landing" method="post">
+            <input name="enter" type="hidden" value="launch">
+            <button type="submit">Start Your Day</button>
+        </form>
         <div class="fCont">
             <div class="cont">
                 <img src="{{ url_for('static', filename='images/thought.png') }}" alt="broken_thought">
@@ -28,10 +32,6 @@
                 <div>Optional wallet connection to store your streaks permanently on-chain.</div>
             </div>
         </div>
-        <form action="/landing" method="post">
-            <input name="enter" type="hidden" value="launch">
-            <button type="submit">Start Your Day</button>
-        </form>
     </main>
     <footer>
         <div>Like Minded Troop(LMT) Affilliated Project</div>
