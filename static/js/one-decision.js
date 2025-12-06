@@ -10,13 +10,20 @@ document.addEventListener("DOMContentLoaded", () => {
         })
 
         for (let i=0; i < checks.length; i++) {
-            checks[i].addEventListener("click", () => {
+            checks[i].addEventListener("click", (e) => {
+                let task = e.target;
                 // alert("you just checked a box");
                 count.textContent = 0;
                 for (let choice of checks) {
                     if (choice.checked === true) {
                         count.textContent = eval(Number(count.textContent) + 1);
                     }
+                }
+
+                if (count.textContent === "6") {
+                    task.checked = false;
+                    alert("You can only choose 5 of 20 tasks for now.");
+                    count.textContent = eval(Number(count.textContent) - 1);
                 }
             });
         };
