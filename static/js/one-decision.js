@@ -1,10 +1,21 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
     if (document.body.id === "index") {
         let form = document.querySelector("main form");
         let checks = document.querySelectorAll("main form .check");
         let count = document.querySelector("form .setCont .count span");
 
-        
+        async function get_tasks() {
+            try {
+                r = await fetch("/api/tasks");
+                data = await r.json();
+                console.log(data.msg);
+            }
+            catch(error) {
+                console.log({error: error});
+            }
+            
+        }
+        await get_tasks()
 
         form.addEventListener("submit", (e) => {
             e.preventDefault();

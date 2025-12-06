@@ -16,9 +16,6 @@ Session(app)
 
 @app.route("/", methods=["GET", "POST"])
 def index():
-    if request.method == "POST":
-        tasks = get_tasks()
-        return tasks
     if not session.get("launch"):
         return redirect("/landing")
     return render_template("index.html", page_id="index")
@@ -29,6 +26,12 @@ def landing():
         session["launch"] = request.form.get("enter")
         return redirect("/")
     return render_template("landing.html", page_id="landing")
+
+@app.route("/api/tasks", methods=["POST", "GET"])
+def tasks_api():
+    tasks = get_tasks()
+    return jsonify({"msg": tasks})
+
 
 if "__name__" == "__main__":
     app.run(port=8080, use_reloader=True, debug=True, reloader_type="watchdog")

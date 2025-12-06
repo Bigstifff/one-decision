@@ -69,4 +69,4 @@ def get_tasks():
     else:
         return "invalid response"
     
-# print(get_tasks())
+print(get_tasks())
