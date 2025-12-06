@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
         let checks = document.querySelectorAll("main form .check");
         let count = document.querySelector("form .setCont .count span");
 
+        
+
         form.addEventListener("submit", (e) => {
             e.preventDefault();
             alert("this page is under construction...")

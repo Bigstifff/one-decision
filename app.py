@@ -1,6 +1,7 @@
 from flask import Flask, session, request, jsonify, render_template, redirect
 from flask_session import Session
 from cs50 import SQL
+from organizer import get_tasks
 
 # databse integration 
 db = SQL("sqlite:///oneDecision.db")
@@ -15,6 +16,9 @@ Session(app)
 
 @app.route("/", methods=["GET", "POST"])
 def index():
+    if request.method == "POST":
+        tasks = get_tasks()
+        return tasks
     if not session.get("launch"):
         return redirect("/landing")
     return render_template("index.html", page_id="index")
