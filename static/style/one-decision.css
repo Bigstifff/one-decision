@@ -162,8 +162,53 @@ footer .x:hover {
     margin-top: 10px;
 }
 #index .indexH {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin: auto;
+    gap: 20px;
     margin-bottom: 0.8rem;
+}
+#index .indexH img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-color: pink;
+    border-radius: 50px;
+}
+#index main .load {
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+#index main .infoCont {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 20;
+    background-color: rgba(0, 0, 0, 0.389);
+    backdrop-filter: blur(3px);
+}
+#index main .infoCont .info {
+    background-color: green;
+    width: fit-content;
+    margin: auto;
+    padding: 25px;
+    border-radius: 20px;
+    margin-top: 20rem;
+    line-height: 1.5;
+    color: lightgreen;
+}
+#index main .infoCont .info h3 {
+    color: white;
+    margin-bottom: 10px;
 }
 #index main form {
     /* outline: 1px solid red; */
@@ -217,8 +262,8 @@ footer .x:hover {
     transform: translateY(3px);
 }
 #index main form .setCont {
-    position: fixed;
-    top: 75%;
+    position: absolute;
+    top: 105%;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -254,4 +299,7 @@ footer .x:hover {
     #index main form {
         grid-template-columns: repeat(2, 1fr);
     }
+}
+#index footer {
+    margin-top: 10rem;
 }

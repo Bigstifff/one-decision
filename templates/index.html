@@ -9,91 +9,29 @@
         </div>
     </header>
     <main>
-        <div class="indexH"><h3>Choose Your 5 Actions for Today</h3></div>
+        <div class="indexH"><h3>Choose Your 5 Actions for Today</h3><img src="{{ url_for('static', filename='images/info.png') }}" alt="info"></div>
+        <div class="infoCont">
+            <div class="info">
+                <h3>INSTRUCTIONS</h3>
+                <ul>
+                    <li>Select and set 5 tasks to accomplish for the day.</li>
+                    <li>Come back at night to check them off.</li>
+                </ul>
+            </div>
+        </div>
+        <img class="load" src="{{ url_for('static', filename='images/Loading3.gif') }}" alt="loading_3">
         <form>
             <div class="choices_1">
-                <div class="choice">
+                <!-- <div class="choice">
                     <input name="choice1" value="Drink 1L of Water" type="checkbox" id="check" class="check">
                     <label for="check">Drink 1L of Water</label>
-                </div>
-                <div class="choice">
-                    <input name="choice1" value="10-min Walk" type="checkbox" id="check2" class="check">
-                    <label for="check2">10-min Walk</label>
-                </div>
-                <div class="choice">
-                    <input name="choice1" value="No Junk Food" type="checkbox" id="check3" class="check">
-                    <label for="check3">No Junk Food</label>
-                </div>
-                <div class="choice">
-                    <input name="choice1" value="Drink 1L of Water" type="checkbox" id="check4" class="check">
-                    <label for="check4">Drink 1L of Water</label>
-                </div>
-                <div class="choice">
-                    <input name="choice1" value="10-min Walk" type="checkbox" id="check5" class="check">
-                    <label for="check5">10-min Walk</label>
-                </div>
-                <div class="choice">
-                    <input name="choice1" value="No Junk Food" type="checkbox" id="check6" class="check">
-                    <label for="check6">No Junk Food</label>
-                </div>
-                <div class="choice">
-                    <input name="choice1" value="No Junk Food" type="checkbox" id="check7" class="check">
-                    <label for="check7">No Junk Food</label>
-                </div>
-                <div class="choice">
-                    <input name="choice1" value="Drink 1L of Water" type="checkbox" id="check8" class="check">
-                    <label for="check8">Drink 1L of Water</label>
-                </div>
-                <div class="choice">
-                    <input name="choice1" value="10-min Walk" type="checkbox" id="check9" class="check">
-                    <label for="check9">10-min Walk</label>
-                </div>
-                <div class="choice">
-                    <input name="choice1" value="No Junk Food" type="checkbox" id="check10" class="check">
-                    <label for="check10">No Junk Food</label>
-                </div>
+                </div> -->
             </div>
             <div class="choices_2">
-                <div class="choice">
+                <!-- <div class="choice">
                     <input name="choice1" value="No Junk Food" type="checkbox" id="check11" class="check">
                     <label for="check11">No Junk Food</label>
-                </div>
-                <div class="choice">
-                    <input name="choice1" value="No Junk Food" type="checkbox" id="check12" class="check">
-                    <label for="check12">No Junk Food</label>
-                </div>
-                <div class="choice">
-                    <input name="choice1" value="No Junk Food" type="checkbox" id="check13" class="check">
-                    <label for="check13">No Junk Food</label>
-                </div>
-                <div class="choice">
-                    <input name="choice1" value="No Junk Food" type="checkbox" id="check14" class="check">
-                    <label for="check14">No Junk Food</label>
-                </div>
-                <div class="choice">
-                    <input name="choice1" value="No Junk Food" type="checkbox" id="check15" class="check">
-                    <label for="check15">No Junk Food</label>
-                </div>
-                <div class="choice">
-                    <input name="choice1" value="No Junk Food" type="checkbox" id="check16" class="check">
-                    <label for="check16">No Junk Food</label>
-                </div>
-                <div class="choice">
-                    <input name="choice1" value="No Junk Food" type="checkbox" id="check17" class="check">
-                    <label for="check17">No Junk Food</label>
-                </div>
-                <div class="choice">
-                    <input name="choice1" value="No Junk Food" type="checkbox" id="check18" class="check">
-                    <label for="check18">No Junk Food</label>
-                </div>
-                <div class="choice">
-                    <input name="choice1" value="No Junk Food" type="checkbox" id="check19" class="check">
-                    <label for="check19">No Junk Food</label>
-                </div>
-                <div class="choice">
-                    <input name="choice1" value="No Junk Food" type="checkbox" id="check20" class="check">
-                    <label for="check20">No Junk Food</label>
-                </div>
+                </div> -->
             </div>
             <div class="setCont">
                 <div class="count"><span>0</span> of 5 Selected</div>
@@ -101,5 +39,13 @@
             </div>
         </form>
     </main>
+    <footer>
+        <div>Like Minded Troop(LMT) Affilliated Project</div>
+        <div>&copy; 2025 Like Minded Troop</div>
+        <div>
+            <img class="lmt" src="{{ url_for('static', filename='images/lmt_no_tagline.png') }}" alt="LMT logo">
+            <a href="https://www.x.com/lmt_dao"><img class="x" src="{{ url_for('static', filename='images/x.png') }}" alt="X logo"></a>
+        </div>
+    </footer>
 
 {% endblock %}
