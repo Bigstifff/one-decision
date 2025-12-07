@@ -220,6 +220,31 @@ footer .x:hover {
     overflow-y: auto;
     height: 30rem;
 }
+#index main .timerCont {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.727);
+    backdrop-filter: blur(3px);
+    text-align: center;
+    z-index: 12;
+}
+#index main .timerCont img {
+    margin-top: 20rem;
+    width: 150px;
+    height: 150px;
+}
+#index main .timerCont div {
+    background: linear-gradient(90deg, purple, pink);
+    width: fit-content;
+    font-size: xx-large;
+    font-weight: bold;
+    margin: auto;
+    -webkit-background-clip: text;
+    color: transparent;
+}
 #index main form .choices_1 {
     display: grid;
     gap: 15px;
