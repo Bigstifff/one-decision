@@ -16,6 +16,9 @@ Session(app)
 
 @app.route("/", methods=["GET", "POST"])
 def index():
+    if request.method == "POST":
+        session["json_tasks"] = request.get_json()
+        return jsonify({"msg": "congrats, you've setup your tasks"})
     if not session.get("launch"):
         return redirect("/landing")
     return render_template("index.html", page_id="index")

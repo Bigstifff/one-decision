@@ -8,11 +8,82 @@ document.addEventListener("DOMContentLoaded", async () => {
         let infoImg = document.querySelector(".indexH img");
         let infoCont = document.querySelector(".infoCont");
         let info = infoCont.querySelector(".infoCont .info");
+        let hr = document.querySelector(".countDown #hr");
+        let min = document.querySelector(".countDown #min");
+        let sec = document.querySelector(".countDown #sec");
+        let countDownCont = document.querySelector(".timerCont");
+        let setLoader = document.querySelector(".btnCont img");
+        let setBtn = document.querySelector(".btnCont input");
         
         infoCont.style.display = "none";
         
         choices_1.style.display = "none";
         choices_2.style.display = "none";
+        tasks = "";
+
+        // send an auto api request to '/api/choosen_tasks', if the returned array is not empty, display timer countdown
+        try {
+            r = await fetch("/api/choosen_tasks")
+            data = await r.json();
+            console.log(data.msg);
+            if ((data.msg).length != 0) {
+                countDownCont.style.display = "block";
+            }
+        }
+        catch(error) {
+            console.log({error: error});
+        }
+
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            setBtn.style.display="none";
+            setLoader.style.display="block";
+            
+            const form_data = Object.fromEntries(new FormData(form));
+            try {
+                r = await fetch("/", {
+                    method: "POST",
+                    headers: {"Content-Type": "application/json"},
+                    body: JSON.stringify(form_data)
+                })
+                data = await r.json();
+                console.log(data.msg);
+                
+                setTimeout(() => {
+                    setBtn.style.display="block";
+                    setLoader.style.display="none";
+                    countDownCont.style.display = "block";
+                    alert("You've successfully setup your daily tasks");
+                }, 3000);
+            }
+            catch(error) {
+                console.log({error: error});
+            }
+        });
+
+        let currentHour = new Date().getHours();
+        let startingHour = 20 - currentHour;
+        let time = startingHour * 3600; // get full time in seconds
+
+        function countDown() {
+            let hour = Math.floor(time/3600);
+            let minute = Math.floor(time/60);
+            minute = minute % 60;
+            seconds = time % 60;
+            minute = minute < 10? '0'+minute : minute;
+            seonds = seconds < 10? '0'+seconds : seconds;
+
+            if (time === 0 || hour < 0) {
+                countDownCont.style.display = "none";
+            }
+
+            hr.textContent = hour;
+            min.textContent = minute;
+            sec.textContent = seconds;
+
+            time--;
+        }
+        setInterval(() => countDown(), 1000);
 
         infoImg.addEventListener("click", () => {
             if (infoCont.style.display === "none") {

@@ -43,7 +43,10 @@
         </form>
         <div class="timerCont">
             <img src="{{ url_for('static', filename='images/timer2.gif') }}" alt="timer">
-            <div>Come back in <span>0</span>hrs</div>
+            <div class="countDown">
+                <div>Come back in</div>
+                <span id="hr">0</span>hrs <span id="min">0</span>min <span id="sec">0</span>sec
+            </div>
         </div>
     </main>
     <footer>
