@@ -40,7 +40,6 @@ document.addEventListener("DOMContentLoaded", async () => {
                 r = await fetch("/api/tasks");
                 data = await r.json();
                 let tasks = data.msg;
-                console.log(tasks)
 
                 for (let i=0; i < 10; i++) {
                     let choice = document.createElement("div");
@@ -77,7 +76,6 @@ document.addEventListener("DOMContentLoaded", async () => {
                     label.setAttribute("for", check.id);
                     label.textContent = tasks[i];
 
-                    // console.log(label.textContent);
                     choices_2.appendChild(choice);
                     choice.appendChild(check);
                     choice.appendChild(label);
@@ -96,12 +94,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         await get_tasks()
 
         let checks = document.querySelectorAll("form .check");
-        console.log(checks)
-
-        form.addEventListener("submit", (e) => {
-            e.preventDefault();
-            alert("this page is under construction...")
-        })
 
         for (let i=0; i < checks.length; i++) {
             checks[i].addEventListener("click", (e) => {

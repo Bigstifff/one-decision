@@ -35,7 +35,10 @@
             </div>
             <div class="setCont">
                 <div class="count"><span>0</span> of 5 Selected</div>
-                <input class="setBtn" type="submit" value="Set Daily Tasks">
+                <div class="btnCont">
+                    <input class="setBtn" type="submit" value="Set Daily Tasks">
+                    <img src="{{ url_for('static', filename='images/loading4.gif') }}" alt="loading_gif">
+                </div>
             </div>
         </form>
         <div class="timerCont">

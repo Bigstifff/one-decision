@@ -320,6 +320,15 @@ footer .x:hover {
 #index main form .setBtn:hover {
     background-color: rgb(46, 179, 46);
 }
+#index main form .setCont img {
+    width: 70px;
+    background-color: limegreen;
+    padding: 4.6px;
+    padding-left: 105px;
+    padding-right: 105px;
+    border-radius: 20px;
+    display: none;
+}
 @media(min-width: 850px) {
     #index main form {
         grid-template-columns: repeat(2, 1fr);
@@ -327,4 +336,7 @@ footer .x:hover {
 }
 #index footer {
     margin-top: 10rem;
+}
+#index .timerCont {
+    display: none;
 }

@@ -32,6 +32,13 @@ def tasks_api():
     tasks = get_tasks()
     return jsonify({"msg": tasks})
 
+@app.route("/api/choosen_tasks")
+def choosen_tasks():
+    tasks = []
+    for task in session["json_tasks"]:
+        tasks.append(session["json_tasks"][task])
+    return jsonify({"msg": tasks})
+
 
 if "__name__" == "__main__":
     app.run(port=8080, use_reloader=True, debug=True, reloader_type="watchdog")
